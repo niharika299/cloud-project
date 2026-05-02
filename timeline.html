@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com https://lh3.googleusercontent.com https://translate.google.com https://translate.googleapis.com https://www.gstatic.com https://*.firebaseio.com https://*.firebase.com https://*.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://www.gstatic.com;">
+<title>Election Roadmap | Bharat Election Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#1a1c20",
+                      "on-primary-container": "#7a7bd3",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#e41f2e",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#45474b",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-tertiary-container": "#838489",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "on-primary-fixed": "#0c0466",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "outline-variant": "#c7c5d3",
+                      "surface-container-high": "#ebe7e7",
+                      "surface-variant": "#e5e2e1",
+                      "primary-fixed-dim": "#c1c1ff",
+                      "tertiary-container": "#1a1c20",
+                      "tertiary": "#000102",
+                      "on-surface-variant": "#464651",
+                      "tertiary-fixed-dim": "#c6c6cc",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#777682",
+                      "surface-tint": "#5455aa",
+                      "on-secondary-fixed": "#410004",
+                      "surface-dim": "#dcd9d9",
+                      "on-secondary-fixed-variant": "#930015",
+                      "inverse-primary": "#c1c1ff",
+                      "surface-container": "#f0edec",
+                      "surface-container-low": "#f6f3f2",
+                      "on-primary-fixed-variant": "#3c3c91",
+                      "primary-container": "#0c0566",
+                      "background": "#fcf8f8",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-surface": "#1c1b1b",
+                      "primary": "#000007",
+                      "primary-fixed": "#e1dfff",
+                      "secondary-fixed": "#ffdad7",
+                      "on-background": "#1c1b1b",
+                      "secondary": "#bb001d",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#fcf8f8",
+                      "surface": "#fcf8f8",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#e2e2e8",
+                      "on-secondary-container": "#fffbff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "xl": "80px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "margin": "32px",
+                      "lg": "48px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "caption": ["Public Sans"],
+                      "headline-lg": ["Public Sans"],
+                      "display-lg": ["Public Sans"],
+                      "body-lg": ["Public Sans"],
+                      "headline-md": ["Public Sans"],
+                      "label-md": ["Public Sans"],
+                      "body-md": ["Public Sans"]
+              },
+              "fontSize": {
+                      "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, #FF9933, #0c0566);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .timeline-track::before {
+                left: 24px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-[0_4px_20px_rgba(12,5,102,0.06)] sticky top-0 z-50 font-['Public_Sans']">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold text-[#0C0566] dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance">account_balance</span>
+<span>Bharat Election Portal</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0C0566] transition-colors" href="index.html">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0C0566] transition-colors" href="assistant.html">Assistant</a>
+<a class="text-[#0C0566] dark:text-blue-300 border-b-4 border-[#FF9933] pb-1 font-semibold" href="timeline.html">Timeline</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0C0566] transition-colors" href="education.html">Education</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0C0566] transition-colors" href="results.html">Results</a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Translate Page" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button aria-label="Accessibility Options" class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="accessibility_new">accessibility_new</span>
+</button>
+<button class="bg-[#0C0566] text-white px-6 py-2 rounded-lg font-semibold active:scale-95 duration-150 transition-all">
+                    Login/Register
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-20 text-center">
+<span class="text-[#FF9933] font-label-md uppercase tracking-widest mb-4 block">Process Transparency</span>
+<h1 class="font-display-lg text-display-lg text-primary-container mb-6">Interactive Election Cycle Roadmap</h1>
+<p class="font-body-lg text-body-lg text-outline max-w-2xl mx-auto">
+                Navigate through the democratic journey. From the first registration to the final count, understand every milestone of the national election process.
+            </p>
+</section>
+<!-- Timeline Section -->
+<div class="relative timeline-track space-y-24 py-10">
+<!-- Step 1: Voter Registration -->
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="w-full md:w-5/12 order-2 md:order-1">
+<div class="bg-white p-md rounded-xl shadow-[0_8px_30px_rgb(12,5,102,0.04)] border border-outline-variant hover:border-[#FF9933] transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-[#FF9933]/10 text-[#FF9933] p-2 rounded-lg material-symbols-outlined" data-icon="how_to_reg">how_to_reg</span>
+<h3 class="font-headline-md text-headline-md text-primary-container">Voter Registration</h3>
+</div>
+<p class="text-on-surface-variant mb-6 font-body-md">The foundation of democracy. Eligible citizens enroll in the electoral rolls to exercise their right to vote.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-4">
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Key Dates</span>
+<span class="font-label-md text-label-md text-primary">Ongoing / Annual Revision</span>
+</div>
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Status</span>
+<span class="inline-flex items-center gap-1 text-label-md text-green-600">
+<span class="w-2 h-2 rounded-full bg-green-600"></span> Active
+                                </span>
+</div>
+</div>
+<div class="mt-4 hidden group-hover:block">
+<h4 class="font-label-md text-label-md text-primary-container mb-2">Requirements:</h4>
+<ul class="text-caption space-y-1 text-on-surface-variant list-disc pl-4">
+<li>Citizen of India</li>
+<li>18 years of age or above</li>
+<li>Proof of Residence</li>
+<li>Form 6 Submission</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-[#FF9933] flex items-center justify-center z-10 shadow-lg">
+<span class="font-bold text-primary-container">01</span>
+</div>
+<div class="w-full md:w-5/12 order-3">
+<img alt="Voter Registration" class="rounded-xl shadow-md w-full h-48 object-cover" data-alt="A close-up photograph of a modern, clean government registration desk in India. A citizen is interacting with a digital tablet for voter enrollment. The lighting is bright and professional, emphasizing a high-contrast corporate aesthetic with deep blue accents. The environment is organized and peaceful, representing democratic clarity and modern service provision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt3YVedSt_Y0sX3CDmB3w_gN32P1oRoY6vTHDh1lPSVZExxvzzCLCf5IrLMJKWKV7s5IinQ5TnDt8kmfUHqzZkN1JPLLGu9P_fNDH87El5YIT9P0-d1_klwVDJKj1w5gQ4-A50Vgw0WjqiWpTiSc936Bst5nDTRDXegeotOpC_hbEjNg4BCP0MhWI1cPw8e11EOAcEmlTanlJ7RHe1IH3Zevplf579PwCX5S-Fx8PUr_HJlXW-zgjTs1YPPD77rI9t0tQLNFdHyTs"/>
+</div>
+</div>
+<!-- Step 2: Nomination -->
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="w-full md:w-5/12 order-2">
+<div class="bg-white p-md rounded-xl shadow-[0_8px_30px_rgb(12,5,102,0.04)] border border-outline-variant hover:border-[#FF9933] transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-[#0C0566]/10 text-[#0C0566] p-2 rounded-lg material-symbols-outlined" data-icon="assignment_ind">assignment_ind</span>
+<h3 class="font-headline-md text-headline-md text-primary-container">Nomination of Candidates</h3>
+</div>
+<p class="text-on-surface-variant mb-6 font-body-md">Candidates file their nominations and affidavits, which undergo rigorous scrutiny by the Returning Officer.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-4">
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Key Dates</span>
+<span class="font-label-md text-label-md text-primary">T-Minus 30 Days</span>
+</div>
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Affidavit</span>
+<span class="text-label-md text-secondary font-medium">Mandatory</span>
+</div>
+</div>
+<div class="mt-4 hidden group-hover:block">
+<h4 class="font-label-md text-label-md text-primary-container mb-2">Requirements:</h4>
+<ul class="text-caption space-y-1 text-on-surface-variant list-disc pl-4">
+<li>Security Deposit</li>
+<li>Asset &amp; Liability Disclosure</li>
+<li>Criminal Record Declaration</li>
+<li>Party Authorization (Form A &amp; B)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-[#0C0566] flex items-center justify-center z-10 shadow-lg">
+<span class="font-bold text-primary-container">02</span>
+</div>
+<div class="w-full md:w-5/12 order-1 hidden md:block">
+<img alt="Nomination Process" class="rounded-xl shadow-md w-full h-48 object-cover" data-alt="A sharp, wide-angle shot of a formal government office interior with large mahogany tables and official seals on the wall. Important documents with signatures and ink pens are arranged neatly. The lighting is authoritative and cinematic, with soft shadows. The overall aesthetic is corporate and stable, featuring a palette of deep navy and off-white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGd8r5Cvn7fv7N2Y1QVaUV3tgASpgljQ4CnbYpp-XeoWDoEvAUDyXDup0WoKnCWGPoLBDeZRqL32Zv_tQE2WSnpSJVJrYeFzq1QFIMOeXrPYzwmpj8T0nnI5dVZR5JUS_HalYq24Zywvkzmg839BjiraWdNboF2Ehrw3VndE3SG1YkmPHegUE4nmhOBrbkNTsBmnE1TMCvhku1erAs3NVmUt2A6UtuJZ1oHIlF6kWJ3T5Hqy5aKW-wXN0KJIXFJz6TnpEbq73zHIE"/>
+</div>
+</div>
+<!-- Step 3: Campaigning -->
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="w-full md:w-5/12 order-2 md:order-1">
+<div class="bg-white p-md rounded-xl shadow-[0_8px_30px_rgb(12,5,102,0.04)] border border-outline-variant hover:border-[#FF9933] transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-[#FF9933]/10 text-[#FF9933] p-2 rounded-lg material-symbols-outlined" data-icon="campaign">campaign</span>
+<h3 class="font-headline-md text-headline-md text-primary-container">Campaigning Period</h3>
+</div>
+<p class="text-on-surface-variant mb-6 font-body-md">Political parties reach out to the electorate. Strict adherence to the Model Code of Conduct is monitored.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-4">
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Silence Period</span>
+<span class="font-label-md text-label-md text-primary">48 Hours Before Poll</span>
+</div>
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Code of Conduct</span>
+<span class="text-label-md text-secondary font-medium">In Force</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-[#FF9933] flex items-center justify-center z-10 shadow-lg">
+<span class="font-bold text-primary-container">03</span>
+</div>
+<div class="w-full md:w-5/12 order-3">
+<div class="grid grid-cols-2 gap-2">
+<img alt="Town Hall" class="rounded-lg shadow-sm h-48 w-full object-cover" data-alt="A vibrant and professional digital illustration of a community town hall meeting. Citizens of diverse backgrounds are listening to a speaker in a modern auditorium. The color palette is bright and inclusive, dominated by saffron and navy accents. The lighting is high-key, conveying a sense of optimism and civic engagement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8aP1UFQewEmSRzu9uAp_MWt_8dqds5M7XoAOowpVIziF7qXZebFQOkT5NLSDy9tefWz5MC0n_rnagmc3MAM9-x8SxYKrt8qPnbtDHMDB3Im96k2v9xpxwP9jfO9W41NPU0ObszKancWJSbcaJfU6knoIE4GVSMo3R-bhNkZ1oirOzYieGcMHB7lJKFmuETxN4QMdsrDennQNpk2VY046almgCfBCalhKZQaJ6x2lVcPT6tfW3tS2d6pIEDO4dzzR1D99Jz2_VXhg"/>
+<img alt="Digital Campaign" class="rounded-lg shadow-sm h-48 w-full object-cover" data-alt="A clean, minimalist workspace showing multiple digital screens displaying election information and infographics. The aesthetic is tech-focused and modern, with a cool blue lighting scheme. The image represents the digital aspect of campaigning and information dissemination in a structured, corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjxyDxtTchMkDdvnVNPo8ORcsJKJ9k1-18BC6Jri2W2--h9NnGDwgEcPgT6gqvuC2kpiP4JkPdALBbQql-SYdahq_sqi_TKUQ6m6t3aiJh0SqSXTryHnvrcuOJhzxE5hchznwsD6y0lxj0bIGtonwWe5vyCh2Q2Zil1ijGvJ1XUBshXIxV1FJ-cRO_z9c32d29ExH6Uflv4rxZwn7PhbqyYsNl-8HxW856tLudvAnEHUz99KJJRCXj62OrFkZ-7nE9V3ih-ghtESY"/>
+</div>
+</div>
+</div>
+<!-- Step 4: Polling Day -->
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="w-full md:w-5/12 order-2">
+<div class="bg-primary-container p-md rounded-xl shadow-[0_15px_40px_rgb(12,5,102,0.2)] border-2 border-[#FF9933] cursor-pointer">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-[#FF9933] text-white p-2 rounded-lg material-symbols-outlined" data-icon="ballot" data-weight="fill">ballot</span>
+<h3 class="font-headline-md text-headline-md text-white">Polling Day</h3>
+</div>
+<p class="text-primary-fixed mb-6 font-body-md">The core of the democratic exercise. Millions of citizens cast their votes using Electronic Voting Machines (EVMs).</p>
+<div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+<div>
+<span class="text-caption font-caption text-primary-fixed-dim uppercase block mb-1">Time</span>
+<span class="font-label-md text-label-md text-white">07:00 AM - 06:00 PM</span>
+</div>
+<div>
+<span class="text-caption font-caption text-primary-fixed-dim uppercase block mb-1">ID Required</span>
+<span class="text-label-md text-white font-medium">EPIC Card / Valid ID</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full bg-[#FF9933] border-4 border-white flex items-center justify-center z-10 shadow-lg">
+<span class="font-bold text-white">04</span>
+</div>
+<div class="w-full md:w-5/12 order-1 hidden md:block">
+<img alt="Polling Station" class="rounded-xl shadow-md w-full h-48 object-cover" data-alt="An artistic, high-contrast shot of an index finger with indelible ink, placed against a background of a modern polling booth. The lighting is dramatic and focused, highlighting the symbol of voting. The color palette features a deep navy background with the vibrant purple of the ink as a focal point, symbolizing the individual's power in a democracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmf1obyiyy17MUlmh8etwiAJ5VvdwGY-Dn4wLaEV78xaxqvr9wmAIV4_ftHjITApbvh-k5iSg1RbWM45CTjHGvFRR3SttBT3P1hzNkbvVejSiEEm4lNH0BnCYolHGmOE6HS45FOlo0hU0I49iPaqc4fjKAcJEP0GMSLnpUHFMdMG4hf3i2xHUgF1jbcAYpwgUAqJkFqFdeTKXWL5WQ-_C78qMAHtrM1FJG2Bvia_Occh2SXK8bGEFP1__9BFF3IWoLw9IpK2lZYH8"/>
+</div>
+</div>
+<!-- Step 5: Counting -->
+<div class="relative flex flex-col md:flex-row items-center justify-between gap-12 group">
+<div class="w-full md:w-5/12 order-2 md:order-1">
+<div class="bg-white p-md rounded-xl shadow-[0_8px_30px_rgb(12,5,102,0.04)] border border-outline-variant hover:border-[#FF9933] transition-all cursor-pointer">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-green-100 text-green-700 p-2 rounded-lg material-symbols-outlined" data-icon="fact_check">fact_check</span>
+<h3 class="font-headline-md text-headline-md text-primary-container">Counting of Votes</h3>
+</div>
+<p class="text-on-surface-variant mb-6 font-body-md">Transparent and accurate counting of EVM votes and postal ballots under high security.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-4">
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Location</span>
+<span class="font-label-md text-label-md text-primary">Designated Centers</span>
+</div>
+<div>
+<span class="text-caption font-caption text-outline uppercase block mb-1">Outcome</span>
+<span class="text-label-md text-[#0C0566] font-medium">Declaration of Results</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-green-600 flex items-center justify-center z-10 shadow-lg">
+<span class="font-bold text-primary-container">05</span>
+</div>
+<div class="w-full md:w-5/12 order-3">
+<img alt="Data Analysis" class="rounded-xl shadow-md w-full h-48 object-cover" data-alt="A clean, high-tech command center interface showing real-time data visualizations, charts, and maps. The UI is sophisticated with a dark navy theme and glowing cyan and saffron data points. The lighting is low and focused on the glowing screens, representing the precision and transparency of the vote-counting process in a modern digital democracy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYMtSnkiMFOIO30FON0ZBoGiKCirfsfuUBPJeJEaXD9GvY4uBf3FVEdSlrCIC9HpMhwaehVXITlCZy1WvbiaL3d_bf5uV5TKFeanxUjOSntctr9GAKaswind_znog7RCwpRmt8QELAZbBsFq7pN44rwY4jhhj-8QokY8WYc-feT_C0uIWeyBjNX4itd27ke5ERc25u7tggZBcIt7dFfMADyfCvSOEAtJpdslVWgm1WVgamb4_a3Jmu-S1jskQWYZiHB3aH9GGgfUc"/>
+</div>
+</div>
+</div>
+<!-- Call to Action Section -->
+<section class="mt-32 bg-surface-container p-lg rounded-xl flex flex-col md:flex-row items-center justify-between gap-8 border border-outline-variant">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">Be Part of the Process</h2>
+<p class="font-body-md text-on-surface-variant">Your participation strengthens our democracy. Check your registration status or find your polling station today.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-[#FF9933] text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                    Register to Vote
+                </button>
+<button class="border-2 border-[#0C0566] text-[#0C0566] px-8 py-3 rounded-lg font-bold hover:bg-[#0C0566]/5 active:scale-95 transition-all">
+                    Find Polling Booth
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20 font-['Public_Sans'] text-sm">
+<div class="max-w-[1280px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="font-bold text-lg text-[#0C0566] dark:text-white">Bharat Election Portal</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm">Dedicated to making the democratic process accessible, transparent, and efficient for every citizen of India.</p>
+<p class="text-slate-500 dark:text-slate-400">© 2024 Election Commission of India. All rights reserved.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Help Desk</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Contact Us</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Sitemap</a>
+<a class="text-slate-500 dark:text-slate-400 hover:underline hover:text-[#0C0566] transition-all" href="#">Accessibility Statement</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Google Services & Firebase SDK (Initialization only for adoption) -->
+<div id="google_translate_element" class="hidden"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics-compat.js" defer></script>
+</body></html>

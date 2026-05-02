@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com https://lh3.googleusercontent.com https://translate.google.com https://translate.googleapis.com https://www.gstatic.com https://*.firebaseio.com https://*.firebase.com https://*.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://www.gstatic.com;">
+<title>National Election Portal - Voter Education &amp; FAQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#777682",
+                    "outline-variant": "#c7c5d3",
+                    "tertiary": "#000001",
+                    "surface-container-high": "#ebe7e7",
+                    "inverse-surface": "#313030",
+                    "primary-fixed-dim": "#c1c1ff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fcf8f8",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#000007",
+                    "secondary-container": "#e41f2e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#e1dfff",
+                    "secondary": "#bb001d",
+                    "on-surface-variant": "#464651",
+                    "tertiary-container": "#1a1c1c",
+                    "secondary-fixed": "#ffdad7",
+                    "primary-container": "#0c0566",
+                    "on-tertiary-container": "#838484",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface": "#fcf8f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-fixed": "#410004",
+                    "inverse-primary": "#c1c1ff",
+                    "on-primary-container": "#7a7bd3",
+                    "surface-bright": "#fcf8f8",
+                    "surface-container": "#f0edec",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary-fixed": "#0c0466",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-tint": "#5455aa",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3c3c91",
+                    "on-secondary-fixed-variant": "#930015"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "container-max": "1280px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Public Sans"],
+                    "headline-xl": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "label-md": ["Public Sans"],
+                    "headline-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #fcf8f8;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Bar -->
+<header class="bg-white border-b border-slate-200">
+<nav class="flex justify-between items-center w-full px-8 h-20 max-w-[1280px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#0C0566]">National Election Portal</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-slate-600 font-['Public_Sans'] text-sm font-medium tracking-tight hover:text-[#0C0566] transition-colors duration-200" href="index.html">Home</a>
+<a class="text-slate-600 font-['Public_Sans'] text-sm font-medium tracking-tight hover:text-[#0C0566] transition-colors duration-200" href="assistant.html">Assistant</a>
+<a class="text-slate-600 font-['Public_Sans'] text-sm font-medium tracking-tight hover:text-[#0C0566] transition-colors duration-200" href="timeline.html">Timeline</a>
+<a class="text-[#0C0566] font-['Public_Sans'] text-sm font-bold tracking-tight border-b-2 border-[#0C0566] pb-1" href="education.html">Education</a>
+<a class="text-slate-600 font-['Public_Sans'] text-sm font-medium tracking-tight hover:text-[#0C0566] transition-colors duration-200" href="results.html">Results</a>
+</div>
+<div class="flex items-center gap-base">
+<button aria-label="Translate Page" class="material-symbols-outlined text-slate-600 cursor-pointer p-base hover:bg-slate-50 rounded-full" data-icon="language">language</button>
+<button aria-label="Accessibility Options" class="material-symbols-outlined text-slate-600 cursor-pointer p-base hover:bg-slate-50 rounded-full" data-icon="accessibility_new">accessibility_new</button>
+<button aria-label="User Account" class="material-symbols-outlined text-slate-600 cursor-pointer p-base hover:bg-slate-50 rounded-full" data-icon="account_circle">account_circle</button>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-[1280px] mx-auto px-8 py-xl">
+<!-- Hero Search Section -->
+<section class="mb-xl text-center">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-md">Voter Education Center</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg">
+                Empowering every citizen with the knowledge to exercise their fundamental right. Find answers to all your voting-related queries in our comprehensive knowledge base.
+            </p>
+<div class="relative max-w-2xl mx-auto">
+<input class="w-full h-14 pl-14 pr-6 rounded-xl border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all text-body-md" placeholder="Search for 'How to vote', 'Eligibility', or 'Polling station'..." type="text"/>
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+</div>
+</section>
+<!-- Category Grid: Voter Types -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-md">
+<h2 class="font-headline-md text-headline-md text-primary">Voter Categories</h2>
+<span class="font-label-lg text-label-lg text-secondary cursor-pointer hover:underline">View All Types</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="bg-white p-md border border-outline-variant rounded-lg hover:border-primary-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary-container mb-sm text-3xl" data-icon="person_add">person_add</span>
+<h3 class="font-label-lg text-label-lg group-hover:text-primary-container">New Voters</h3>
+</div>
+<div class="bg-white p-md border border-outline-variant rounded-lg hover:border-primary-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary-container mb-sm text-3xl" data-icon="flight">flight</span>
+<h3 class="font-label-lg text-label-lg group-hover:text-primary-container">NRI Voters</h3>
+</div>
+<div class="bg-white p-md border border-outline-variant rounded-lg hover:border-primary-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary-container mb-sm text-3xl" data-icon="accessible">accessible</span>
+<h3 class="font-label-lg text-label-lg group-hover:text-primary-container">PwD Voters</h3>
+</div>
+<div class="bg-white p-md border border-outline-variant rounded-lg hover:border-primary-container transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary-container mb-sm text-3xl" data-icon="badge">badge</span>
+<h3 class="font-label-lg text-label-lg group-hover:text-primary-container">Service Voters</h3>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Main Knowledge Base -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
+<!-- Featured: How to Vote -->
+<div class="md:col-span-8 bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm">
+<div class="md:w-1/2 p-lg flex flex-col justify-center">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md rounded-full w-fit mb-base">ESSENTIAL GUIDE</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">The Voting Process: Step-by-Step</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">A complete walk-through of what happens from the moment you enter the polling booth until your vote is cast on the EVM.</p>
+<button class="bg-primary-container text-on-primary-container px-md py-base rounded-lg font-label-lg w-fit hover:bg-black transition-colors">Start Learning</button>
+</div>
+<div class="md:w-1/2 h-64 md:h-auto relative">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of a modern, clean electronic voting machine inside a brightly lit, sterile polling station. The lighting is high-key and soft, emphasizing a sense of transparency and civic duty. The scene is dominated by a clean white and navy blue color palette, reflecting a high-authority government institution. The composition is focused on the interface of the machine, highlighting ease of use and democratic accessibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTfnLg4NqewlaZc4Wgv-sAEHzRf5GIVeWd2LUXoPpWFEEzbLbR4555yY6PhZJ5FPM9kLHPIQhgv1yAawwxFOdmK6BzaZavgg4lLenG1ocPyeSjOAKFb1dICjTj84iWCuyZK7y7_FGBMkSbKp2CI42vXW_dUkxH6cRJ7clQ1CIwBCYu6EgJVIU75G2MKKPOj_S2MaPvZUfotmy02nunNUc-MpD_pEH08dTKSJB7CysJgMN6mo3pDuiQs4BHMxkwlGTmb0TcuZ6zzNc"/>
+</div>
+</div>
+<!-- Side Card: Eligibility -->
+<div class="md:col-span-4 bg-surface-container-low border border-outline-variant rounded-xl p-lg flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-md" data-icon="verified_user">verified_user</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Eligibility Criteria</h2>
+<ul class="space-y-base font-body-md text-body-md text-on-surface-variant">
+<li class="flex gap-base"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Indian Citizen</li>
+<li class="flex gap-base"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> 18+ years of age</li>
+<li class="flex gap-base"><span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span> Resident of Constituency</li>
+</ul>
+</div>
+<a class="text-primary-container font-label-lg flex items-center gap-xs hover:gap-base transition-all mt-lg" href="#">Check Status <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<!-- Small Card: Polling Station -->
+<div class="md:col-span-4 bg-white border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary mb-md">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-base">Polling Station</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Use your EPIC number or address to find your designated voting location and booth number.</p>
+<div class="bg-slate-50 h-32 rounded-lg flex items-center justify-center border border-dashed border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="A stylized, minimalist map graphic of an urban neighborhood with a highlighted red pin marking a polling station. The map uses a neutral grey and blue color scheme with clean lines and clear typography. The lighting is flat and even, suggesting a digital interface that is easy to read. The overall style is professional, modern, and high-contrast for maximum accessibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHSAzYEPR71hc6EWzAKHYOvYal5kDk-qbQx6p5sYrfwY9HME2szFpAQHt8diMo4OBby5N8fhIaNSfX27gPRIRq78IJmr55CGawSg5gi4eud8ML_uNWFlzvptnYekoYrPD1FZXVamAWFdxZVh4b0wIASwre6xeM-Rw2uLhsaoxrnyRU9N6Ixcm4pEZNwxOGLineWyO-mrQoWzlXAReJzahk6DABmnuRF9QawzBLD0Wtk0GoqYizUmMJ2dYZ6X9ouYdkFi-y_7zn_r4"/>
+</div>
+</div>
+<!-- Small Card: Documents -->
+<div class="md:col-span-4 bg-white border border-outline-variant rounded-xl p-md shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary mb-md">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-base">Required IDs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">List of acceptable identity documents for the voting process if you don't have your Voter ID card yet.</p>
+<div class="space-y-base">
+<div class="flex items-center justify-between p-base bg-surface-container-lowest rounded border border-outline-variant">
+<span class="font-label-md text-label-md">Aadhaar Card</span>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="download">download</span>
+</div>
+<div class="flex items-center justify-between p-base bg-surface-container-lowest rounded border border-outline-variant">
+<span class="font-label-md text-label-md">PAN Card</span>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="download">download</span>
+</div>
+</div>
+</div>
+<!-- Small Card: Important Dates -->
+<div class="md:col-span-4 bg-[#0C0566] text-white rounded-xl p-md shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-md" data-icon="event">event</span>
+<h3 class="font-headline-md text-headline-md mb-base">Upcoming Deadlines</h3>
+<div class="space-y-md">
+<div>
+<p class="text-on-primary-container text-label-md uppercase tracking-wider">Registration Ends</p>
+<p class="font-headline-md">Oct 15, 2024</p>
+</div>
+<div>
+<p class="text-on-primary-container text-label-md uppercase tracking-wider">Postal Ballot Window</p>
+<p class="font-headline-md">Nov 02 - 10</p>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="history">history</span>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-3xl mx-auto mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-lg">Frequently Asked Questions</h2>
+<div class="space-y-md">
+<div class="bg-white border border-outline-variant rounded-lg p-md">
+<div class="flex items-center justify-between cursor-pointer group">
+<h4 class="font-label-lg text-label-lg text-primary">Can I vote if I moved to a different city recently?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+<div class="mt-base font-body-md text-body-md text-on-surface-variant">
+                        Yes, but you must register in your new constituency. You should fill Form 6 to enroll as a voter in your current place of residence and request deletion from your previous location.
+                    </div>
+</div>
+<div class="bg-white border border-outline-variant rounded-lg p-md">
+<div class="flex items-center justify-between cursor-pointer group">
+<h4 class="font-label-lg text-label-lg text-primary">What is an EPIC number?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="bg-white border border-outline-variant rounded-lg p-md">
+<div class="flex items-center justify-between cursor-pointer group">
+<h4 class="font-label-lg text-label-lg text-primary">How do I verify if my name is on the electoral roll?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="bg-white border border-outline-variant rounded-lg p-md">
+<div class="flex items-center justify-between cursor-pointer group">
+<h4 class="font-label-lg text-label-lg text-primary">What happens if someone else has already voted in my name?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<div class="text-center mt-lg">
+<button class="border-2 border-primary-container text-primary-container font-label-lg px-lg py-base rounded-lg hover:bg-slate-50 transition-colors">View All FAQs</button>
+</div>
+</section>
+</main>
+<!-- Interactive Assistant Widget -->
+<div class="fixed bottom-24 right-8 z-50">
+<button class="w-16 h-16 bg-secondary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="smart_toy">smart_toy</span>
+</button>
+</div>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-white border-t border-slate-200 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a href="index.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Home</span>
+</a>
+<a href="assistant.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Assistant</span>
+</a>
+<a href="timeline.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Timeline</span>
+</a>
+<a href="education.html" class="flex flex-col items-center justify-center text-[#0C0566] scale-105">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Education</span>
+</a>
+<a href="results.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Results</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 py-12">
+<div class="w-full flex flex-col items-center gap-6 max-w-[1280px] mx-auto px-8">
+<div class="text-lg font-black text-slate-400">National Election Commission</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Accessibility</a>
+<a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Terms of Use</a>
+<a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Contact</a>
+</div>
+<p class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-400 text-center">© 2024 National Election Commission. Official Government Portal.</p>
+</div>
+</footer>
+<!-- Google Services & Firebase SDK (Initialization only for adoption) -->
+<div id="google_translate_element" class="hidden"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics-compat.js" defer></script>
+</body></html>

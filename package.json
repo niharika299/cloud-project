@@ -1,0 +1,18 @@
+{
+  "name": "election_assistant_app",
+  "version": "1.0.0",
+  "description": "Interactive Election Assistant",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

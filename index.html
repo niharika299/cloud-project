@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com https://lh3.googleusercontent.com https://translate.google.com https://translate.googleapis.com https://www.gstatic.com https://*.firebaseio.com https://*.firebase.com https://*.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://www.gstatic.com;">
+<title>National Election Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#777682",
+                    "outline-variant": "#c7c5d3",
+                    "tertiary": "#000001",
+                    "surface-container-high": "#ebe7e7",
+                    "inverse-surface": "#313030",
+                    "primary-fixed-dim": "#c1c1ff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#ffb3ae",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fcf8f8",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#000007",
+                    "secondary-container": "#e41f2e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#e1dfff",
+                    "secondary": "#bb001d",
+                    "on-surface-variant": "#464651",
+                    "tertiary-container": "#1a1c1c",
+                    "secondary-fixed": "#ffdad7",
+                    "primary-container": "#0c0566",
+                    "on-tertiary-container": "#838484",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface": "#fcf8f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-background": "#1c1b1b",
+                    "on-secondary-fixed": "#410004",
+                    "inverse-primary": "#c1c1ff",
+                    "on-primary-container": "#7a7bd3",
+                    "surface-bright": "#fcf8f8",
+                    "surface-container": "#f0edec",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary-fixed": "#0c0466",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-tint": "#5455aa",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3c3c91",
+                    "on-secondary-fixed-variant": "#930015"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "container-max": "1280px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Public Sans"],
+                    "headline-xl": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "label-md": ["Public Sans"],
+                    "headline-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #fcf8f8;
+        }
+        
+        .typing-indicator span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #777682;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-indicator span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        
+        #chat-container {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Official Alert Banner -->
+<div class="w-full bg-secondary-fixed text-on-secondary-fixed px-8 py-base text-center font-label-md text-label-md flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+        IMPORTANT: ELECTION REGISTRATION CLOSES IN 14 DAYS. ENSURE YOUR DETAILS ARE ACCURATE.
+    </div>
+<!-- TopNavBar -->
+<header class="bg-white border-b border-slate-200">
+<nav class="flex justify-between items-center w-full px-8 h-20 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-md">
+<span class="text-xl font-bold tracking-tighter text-[#0C0566]">National Election Portal</span>
+</div>
+<div class="hidden md:flex items-center gap-lg font-['Public_Sans'] text-sm font-medium tracking-tight">
+<a class="text-[#0C0566] font-bold border-b-2 border-[#0C0566] pb-1" href="index.html">Home</a>
+<a class="text-slate-600 hover:text-[#0C0566] transition-colors duration-200" href="assistant.html">Assistant</a>
+<a class="text-slate-600 hover:text-[#0C0566] transition-colors duration-200" href="timeline.html">Timeline</a>
+<a class="text-slate-600 hover:text-[#0C0566] transition-colors duration-200" href="education.html">Education</a>
+<a class="text-slate-600 hover:text-[#0C0566] transition-colors duration-200" href="results.html">Results</a>
+</div>
+<div class="flex items-center gap-md">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container border-none rounded-lg px-md py-xs text-label-md focus:ring-2 focus:ring-primary-container w-64" placeholder="Search services..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-outline">search</span>
+</div>
+<div class="flex items-center gap-sm text-primary-container">
+<button aria-label="Translate Page" class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">language</button>
+<button aria-label="Accessibility Options" class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">accessibility_new</button>
+<button aria-label="User Account" class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">account_circle</button>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-[1280px] mx-auto px-8 pb-xl">
+<!-- Hero Section -->
+<section class="mt-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center min-h-[500px]">
+<div class="lg:col-span-6 z-10">
+<div class="inline-block bg-secondary-container text-on-secondary px-sm py-xs font-label-lg text-label-lg mb-md">
+                    2024 GENERAL ELECTIONS
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-primary-container mb-md">Empowering Every Citizen's Vote.</h1>
+<p class="font-body-lg text-body-lg text-outline mb-lg max-w-lg">
+                    The National Election Portal provides secure, transparent, and accessible digital infrastructure for the 2024 electoral cycle. Register, verify, and participate in your democracy.
+                </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary-container text-on-primary px-lg py-md font-label-lg text-label-lg rounded-DEFAULT hover:opacity-90 transition-all flex items-center gap-xs">
+                        Check Registration Status
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-primary-container text-primary-container px-lg py-md font-label-lg text-label-lg rounded-DEFAULT hover:bg-slate-50 transition-all">
+                        Find Polling Station
+                    </button>
+<a href="test-report.html" class="bg-secondary text-white px-lg py-md font-label-lg text-label-lg rounded-DEFAULT hover:opacity-90 transition-all flex items-center gap-xs shadow-md">
+                        Run Diagnostics
+                        <span class="material-symbols-outlined">speed</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-full min-h-[400px]">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container to-blue-900 rounded-xl overflow-hidden shadow-2xl">
+<img alt="Democratic participation" class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A cinematic, high-resolution photo of a modern glass voting box illuminated by a soft, directional light source. The background features a blurred, architectural government building with classical columns and contemporary glass facades, representing institutional permanence. The atmosphere is dignified and patriotic, using a color palette of deep navy blues, crisp whites, and subtle saffron accents, emphasizing stability and civic pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsdkgiS0gLtSECHonrkqKei4o_9UR8r6-LOPrLWQVchHR-qwm8leyfEr7DWoigQBYKXzhuIEe3miROQeF2AV7XtSad2auFLmdHL1uuCZe9_T6y43zdmkI4N9wmOA2OvabOET9vFiF2JC-41LfO6wg5I8ViC3SqWVWfggStQFHAyHNYv5GT5VN8bujRbqN6KpXERzGp5CARKZX_nS9iR0wIBxV28er_Nr_pWAP-ruWgZ21w7sUF_edio5DB8zzsaIQn8mzeCu92QTk"/>
+<div class="absolute bottom-md left-md right-md bg-white/90 backdrop-blur-md p-md rounded-lg flex items-center justify-between">
+<div>
+<p class="font-label-md text-label-md text-outline">LIVE COUNTDOWN</p>
+<p class="font-headline-md text-headline-md text-primary-container">42 : 12 : 08 : 45</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-outline">UNTIL POLLS OPEN</p>
+<p class="font-label-lg text-label-lg text-secondary">NOVEMBER 5, 2024</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Bento Grid -->
+<section class="mt-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary-container mb-lg">Essential Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-gutter">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 lg:col-span-6 bg-white border border-slate-200 p-lg flex flex-col justify-between hover:shadow-md transition-shadow group">
+<div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-md">how_to_reg</span>
+<h3 class="font-headline-md text-headline-md text-primary-container mb-sm">Voter Registration</h3>
+<p class="font-body-md text-body-md text-outline mb-md">Update your address, change party affiliation, or register as a new voter. Process takes less than 10 minutes with digital identity verification.</p>
+</div>
+<a class="text-primary-container font-label-lg text-label-lg flex items-center gap-xs group-hover:gap-sm transition-all" href="#">
+                        Launch Registration Portal <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+<!-- Secondary Cards -->
+<div class="md:col-span-2 lg:col-span-3 bg-white border border-slate-200 p-md flex flex-col justify-between hover:border-primary-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-sm">ballot</span>
+<h3 class="font-label-lg text-label-lg text-primary-container mb-xs uppercase tracking-wider">Candidate Info</h3>
+<p class="font-body-md text-body-md text-outline">View certified candidate profiles, manifestos, and funding disclosures for your specific district.</p>
+</div>
+<button class="mt-md font-label-md text-label-md text-primary-container border-b border-primary-container w-fit pb-1">Learn more</button>
+</div>
+<div class="md:col-span-2 lg:col-span-3 bg-white border border-slate-200 p-md flex flex-col justify-between hover:border-primary-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-sm">history_edu</span>
+<h3 class="font-label-lg text-label-lg text-primary-container mb-xs uppercase tracking-wider">Election Rules</h3>
+<p class="font-body-md text-body-md text-outline">Official guidelines on voting procedures, identification requirements, and observer protocols.</p>
+</div>
+<button class="mt-md font-label-md text-label-md text-primary-container border-b border-primary-container w-fit pb-1">Read guidelines</button>
+</div>
+<!-- Bottom Row Cards -->
+<div class="md:col-span-2 lg:col-span-4 bg-surface-container p-md border border-transparent hover:border-slate-300 transition-all">
+<div class="flex items-start gap-md">
+<div class="bg-white p-sm rounded-full shadow-sm text-primary-container">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary-container">Polling Locator</h4>
+<p class="text-sm text-outline">Enter your zip code to find your nearest official voting station.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 lg:col-span-4 bg-surface-container p-md border border-transparent hover:border-slate-300 transition-all">
+<div class="flex items-start gap-md">
+<div class="bg-white p-sm rounded-full shadow-sm text-primary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary-container">Absentee Ballot</h4>
+<p class="text-sm text-outline">Request a mail-in ballot if you are unable to visit a polling station.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 lg:col-span-4 bg-surface-container p-md border border-transparent hover:border-slate-300 transition-all">
+<div class="flex items-start gap-md">
+<div class="bg-white p-sm rounded-full shadow-sm text-primary-container">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary-container">Voter Protection</h4>
+<p class="text-sm text-outline">Report issues or irregularities directly to the commission.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Civic Education Timeline -->
+<section class="mt-xl bg-[#0C0566] text-white p-xl rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-lg">Election Timeline</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg relative">
+<div class="absolute top-[40px] left-0 w-full h-[1px] bg-white/20 hidden md:block"></div>
+<div class="relative pt-lg">
+<div class="w-4 h-4 rounded-full bg-secondary absolute top-[33px] left-0 z-20 shadow-[0_0_10px_#bb001d]"></div>
+<p class="font-label-md text-label-md text-secondary-fixed opacity-70 mb-xs">AUG 1 - SEPT 30</p>
+<h4 class="font-label-lg text-label-lg mb-xs">Registration Phase</h4>
+<p class="text-xs text-white/60">Final window for new voter registration and address updates across all districts.</p>
+</div>
+<div class="relative pt-lg">
+<div class="w-4 h-4 rounded-full bg-white/30 absolute top-[33px] left-0 z-20"></div>
+<p class="font-label-md text-label-md text-white/40 mb-xs">OCT 1 - OCT 25</p>
+<h4 class="font-label-lg text-label-lg mb-xs">Ballot Preparation</h4>
+<p class="text-xs text-white/60">Certified ballots distributed to local municipalities and absentee voters.</p>
+</div>
+<div class="relative pt-lg">
+<div class="w-4 h-4 rounded-full bg-white/30 absolute top-[33px] left-0 z-20"></div>
+<p class="font-label-md text-label-md text-white/40 mb-xs">OCT 26 - NOV 4</p>
+<h4 class="font-label-lg text-label-lg mb-xs">Early Voting</h4>
+<p class="text-xs text-white/60">Selected polling stations open for early participation in metropolitan areas.</p>
+</div>
+<div class="relative pt-lg">
+<div class="w-4 h-4 rounded-full bg-white/30 absolute top-[33px] left-0 z-20"></div>
+<p class="font-label-md text-label-md text-white/40 mb-xs">NOV 5</p>
+<h4 class="font-label-lg text-label-lg mb-xs">Election Day</h4>
+<p class="text-xs text-white/60">Polls open nationwide from 7:00 AM to 8:00 PM local time.</p>
+</div>
+</div>
+</div>
+<!-- Decorative texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 mt-xl">
+<div class="w-full flex flex-col items-center gap-6 max-w-[1280px] mx-auto py-12 px-8">
+<div class="text-lg font-black text-slate-400 uppercase tracking-tighter">National Election Commission</div>
+<div class="flex flex-wrap justify-center gap-lg font-['Public_Sans'] text-xs uppercase tracking-widest">
+<a class="text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Accessibility</a>
+<a class="text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Terms of Use</a>
+<a class="text-slate-500 hover:text-[#0C0566] transition-opacity duration-300" href="#">Contact</a>
+</div>
+<div class="w-full border-t border-slate-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-['Public_Sans'] text-xs uppercase tracking-widest text-slate-400">© 2024 National Election Commission. Official Government Portal.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer">share</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer">rss_feed</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-white border-t border-slate-200 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a href="index.html" class="flex flex-col items-center justify-center text-[#0C0566] scale-105">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Home</span>
+</a>
+<a href="#" onclick="toggleChat(); return false;" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 hover:text-[#0C0566] transition-all">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Assistant</span>
+</a>
+<a href="timeline.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 hover:text-[#0C0566] transition-all">
+<span class="material-symbols-outlined">event_note</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Timeline</span>
+</a>
+<a href="education.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 hover:text-[#0C0566] transition-all">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Education</span>
+</a>
+<a href="results.html" class="flex flex-col items-center justify-center text-slate-400 opacity-70 hover:opacity-100 hover:text-[#0C0566] transition-all">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-['Public_Sans'] text-[11px] font-semibold">Results</span>
+</a>
+</nav>
+<!-- Floating AI Assistant Widget -->
+<div class="fixed bottom-md right-md z-[60] md:bottom-lg md:right-lg flex flex-col items-end gap-sm">
+    <!-- Expanded Widget -->
+    <div id="chat-widget" class="w-80 sm:w-96 bg-white shadow-2xl rounded-xl border border-slate-200 overflow-hidden flex flex-col h-[500px]">
+        <div class="bg-primary-container p-md text-white flex justify-between items-center">
+            <div>
+                <p class="font-label-lg text-label-lg">Election Assistant</p>
+                <div class="flex items-center gap-xs mt-1">
+                    <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-tighter text-blue-200">Online</span>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="resetChat()" class="text-white hover:text-blue-200 transition-colors" title="Reset Chat">
+                    <span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                </button>
+                <button onclick="toggleChat()" class="text-white hover:text-blue-200 transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="chat-container" class="flex-grow p-md overflow-y-auto flex flex-col gap-md bg-[#fcfcfc]">
+            <!-- System Message -->
+            <div class="flex justify-center my-xs">
+                <span class="bg-surface-container-high px-sm py-xs rounded-full text-[10px] font-bold text-outline uppercase tracking-widest">Today</span>
+            </div>
+
+            <!-- Initial AI Message -->
+            <div class="flex gap-sm max-w-[90%]">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-white text-[14px]">smart_toy</span>
+                </div>
+                <div class="bg-surface-container border border-outline-variant p-sm rounded-r-lg rounded-bl-lg shadow-sm">
+                    <p class="font-body-md text-sm text-on-surface">Welcome! I am your official Election Assistant. I'm here to help you understand the election process, timelines, and exactly what steps you need to take to vote. What would you like to know about today?</p>
+                </div>
+            </div>
+
+            <!-- Suggested Chips -->
+            <div id="suggested-chips" class="flex flex-col gap-2 ml-8 mt-2">
+                <button onclick="sendMessage('What is the election timeline?')" class="bg-white border border-secondary text-secondary font-label-md text-xs px-sm py-xs rounded hover:bg-secondary hover:text-white transition-all text-left">What is the election timeline?</button>
+                <button onclick="sendMessage('How do I register to vote?')" class="bg-white border border-secondary text-secondary font-label-md text-xs px-sm py-xs rounded hover:bg-secondary hover:text-white transition-all text-left">How do I register to vote?</button>
+                <button onclick="sendMessage('Explain the voting process')" class="bg-white border border-secondary text-secondary font-label-md text-xs px-sm py-xs rounded hover:bg-secondary hover:text-white transition-all text-left">Explain the voting process</button>
+            </div>
+        </div>
+
+        <form onsubmit="handleFormSubmit(event)" class="p-sm bg-slate-100 border-t border-slate-200 flex items-center gap-xs">
+            <input id="chat-input" class="bg-white border border-outline-variant rounded px-sm py-xs text-sm w-full focus:ring-1 focus:ring-primary-container focus:outline-none" placeholder="Type a question..." type="text" autocomplete="off"/>
+            <button type="submit" class="text-primary-container hover:text-primary transition-colors flex items-center justify-center p-1">
+                <span class="material-symbols-outlined">send</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Floating Button -->
+    <button aria-label="Open Election Assistant" onclick="toggleChat()" class="w-14 h-14 bg-secondary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform shrink-0">
+        <span class="material-symbols-outlined text-[32px]" data-weight="fill">smart_toy</span>
+    </button>
+</div>
+
+<script src="script.js" defer></script>
+<script>
+    function toggleChat() {
+        const widget = document.getElementById('chat-widget');
+        if (widget.classList.contains('hidden')) {
+            widget.classList.remove('hidden');
+        } else {
+            widget.classList.add('hidden');
+        }
+    }
+</script>
+<!-- Google Services & Firebase SDK (Initialization only for adoption) -->
+<div id="google_translate_element" class="hidden"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics-compat.js" defer></script>
+</body></html>
